@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/btn_filter.xml" value="0.2" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/delete_style.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/edit_priority.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/edit_txt_shape.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_delnotes.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_logout.xml" value="0.241" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_save.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/no_btn.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/purple2_dot.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/purple_dot.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/teal_dot.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/yes_btn.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_login_screen.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_main.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_register_screen.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_splash_screen.xml" value="0.176" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_start_screen.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/dialog_delete.xml" value="0.2" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/dialog_logout.xml" value="0.176" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_create_blank.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_create_note.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_edit_notes.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_home.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/layout/item_notes.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/menu/delete_menu.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/menu/logout_menu.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2265" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
