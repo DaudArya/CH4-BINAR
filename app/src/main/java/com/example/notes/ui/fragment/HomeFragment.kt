@@ -1,23 +1,35 @@
 package com.example.notes.ui.fragment
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.notes.R
+import com.example.notes.SharedPreferences.SharedPreference
 import com.example.notes.databinding.FragmentHomeBinding
+import com.example.notes.ui.LoginActivity
 import com.example.notes.ui.ViewModel.NotesViewModel
 import com.example.notes.ui.adapter.NotesAdapter
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment() {
+    var sharedPreference: SharedPreference? = null
 
     lateinit var binding: FragmentHomeBinding
+
     val viewModel : NotesViewModel by viewModels()
+
 
 
     override fun onCreateView(
@@ -69,6 +81,21 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_createNoteFragment2)
         }
 
+
         return binding.root
     }
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+

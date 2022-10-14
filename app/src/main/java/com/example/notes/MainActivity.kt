@@ -1,139 +1,100 @@
 package com.example.notes
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.notes.databinding.ActivityMainBinding
+import com.example.notes.SharedPreferences.SharedPreference
+import com.example.notes.ui.LoginActivity
+import com.example.notes.ui.ViewModel.NotesViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
-
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+
+    var sharedPreference: SharedPreference? = null
     lateinit var navController: NavController
-//    private lateinit var db: FirebaseFirestore
+    val viewModel : NotesViewModel by viewModels()
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val navController = findNavController(R.id.FragmentContainerView)
-        setupActionBarWithNavController(navController)
-//
-//        val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
-//        val isLogin=sharedPref.getString("Email","1")
-//        val out : Button = findViewById(R.id.logout)
-//        out.setOnClickListener {
-//            sharedPref.edit().remove("Email").apply()
-//            var intent = Intent(this,MainActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//        if(isLogin=="1")
-//        {
-//            var email=intent.getStringExtra("email")
-//            if(email!=null)
-//            {
-//                setText(email)
-//                with(sharedPref.edit())
-//                {
-//                    putString("Email",email)
-//                    apply()
-//                }
-//            }
-//            else{
-//                var intent = Intent(this,MainActivity::class.java)
-//                startActivity(intent)
-//                finish()
-//            }
-//        }
-//        else
-//        {
-//            setText(isLogin)
-//        }
 
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+    val navController = findNavController(R.id.FragmentContainerView)
+    setupActionBarWithNavController(navController)
+        sharedPreference = SharedPreference(this)
+
+}
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.logout_menu, menu)
+        return true
     }
 
-//    private fun setText(email:String?)
-//    {
-//        db= FirebaseFirestore.getInstance()
-//        if (email != null) {
-//            db.collection("USERS").document(email).get()
-//                .addOnSuccessListener {
-//                        tasks->
-//
-//                }
-//        }
-//
-//    }
-
-    override fun onNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onNavigateUp()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logout-> {
+                logout()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
-
-
-
+    fun logout(){
+        sharedPreference = SharedPreference(this)
+        sharedPreference!!.clearSharedPreference()
+        Toast.makeText(this,"User LogOut Successfully.",Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 
 
 }
 
 
-//val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
-//val isLogin=sharedPref.getString("Email","1")
-//logout.setOnClickListener {
-//    sharedPref.edit().remove("Email").apply()
-//    var intent = Intent(this,MainActivity::class.java)
-//    startActivity(intent)
-//    finish()
-//}
-//if(isLogin=="1")
-//{
-//    var email=intent.getStringExtra("email")
-//    if(email!=null)
-//    {
-//        setText(email)
-//        with(sharedPref.edit())
-//        {
-//            putString("Email",email)
-//            apply()
+
+
+//override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//    if(item.itemId==R.id.logout){
+//
+//        val bottomSheet: BottomSheetDialog = BottomSheetDialog(requireContext(),R.style.bottomsheet_style)
+//        bottomSheet.setContentView(R.layout.dialog_logout)
+//
+//        val textViewYes = bottomSheet.findViewById<TextView>(R.id.YesLogout)
+//        val textViewNo = bottomSheet.findViewById<TextView>(R.id.NoLogout)
+//
+//        textViewYes?.setOnClickListener{
+//            bottomSheet.dismiss()
 //        }
+//
+//        textViewNo?.setOnClickListener{
+//            bottomSheet.dismiss()
+//        }
+//
+//
+//        bottomSheet.show()
 //    }
-//    else{
-//        var intent = Intent(this,MainActivity::class.java)
-//        startActivity(intent)
-//        finish()
-//    }
+//    return super.onOptionsItemSelected(item)
 //}
-//else
-//{
-//    setText(isLogin)
-//}
-//
-//}
-//
-//private fun setText(email:String?)
-//{
-//    db= FirebaseFirestore.getInstance()
-//    if (email != null) {
-//        db.collection("USERS").document(email).get()
-//            .addOnSuccessListener {
-//                    tasks->
-//                name.text=tasks.get("Name").toString()
-//                phone.text=tasks.get("Phone").toString()
-//                emailLog.text=tasks.get("email").toString()
-//
-//            }
-//    }
-//
-//}
+
+

@@ -27,4 +27,5 @@
     <style name="Modal" parent = "Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/delete_style</item>
     </style>
+    <style name="Theme.Noaction" parent="Theme.MaterialComponents.DayNight.NoActionBar"></style>
 </resources>

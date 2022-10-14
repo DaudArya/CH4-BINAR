@@ -1,19 +1,28 @@
 package com.example.notes.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.util.Log
 import android.view.*
-import android.widget.TextView
-import androidx.fragment.app.Fragment
+import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.notes.MainActivity
 import com.example.notes.Model.Notes
 import com.example.notes.R
 import com.example.notes.databinding.FragmentEditNotesBinding
 import com.example.notes.ui.ViewModel.NotesViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.android.synthetic.main.fragment_edit_notes.*
 import java.util.*
 
 
@@ -22,12 +31,16 @@ class EditNotesFragment : Fragment() {
     val noteslama by navArgs<EditNotesFragmentArgs>()
     lateinit var binding: FragmentEditNotesBinding
     val viewModel : NotesViewModel by viewModels()
+    lateinit var navController: NavController
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+
         // Inflate the layout for this fragment
         binding = FragmentEditNotesBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
@@ -61,8 +74,9 @@ class EditNotesFragment : Fragment() {
         binding.btnEditSaveNotes2.setOnClickListener(){
             UpdateNotes(it)
         }
-
-
+        binding.btndelete.setOnClickListener(){
+            DeleteNotes(it)
+        }
 
         return binding.root
     }
@@ -84,34 +98,24 @@ class EditNotesFragment : Fragment() {
         Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.delete_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
+    fun DeleteNotes(it:View?){
+        viewModel.deleteNotes(noteslama.data.id!!)
+        Toast.makeText(requireContext(), "Delete Note Successfully", Toast.LENGTH_LONG).show()
+        activity?.let {
+            val intent = Intent(it,MainActivity::class.java)
+            it.startActivity(intent)}
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId==R.id.deletemenu){
-            val bottomSheet:BottomSheetDialog = BottomSheetDialog(requireContext(),R.style.bottomsheet_style)
-            bottomSheet.setContentView(R.layout.dialog_delete)
-
-            val textViewYes = bottomSheet.findViewById<TextView>(R.id.YesDelete)
-            val textViewNo = bottomSheet.findViewById<TextView>(R.id.NoDelete)
-
-            textViewYes?.setOnClickListener{
-                viewModel.deleteNotes(noteslama.data.id!!)
-                Toast.makeText(requireContext(), "Delete Note Successfully", Toast.LENGTH_LONG).show()
-                bottomSheet.dismiss()
-            }
-
-            textViewNo?.setOnClickListener{
-                bottomSheet.dismiss()
-            }
 
 
-            bottomSheet.show()
-        }
-        return super.onOptionsItemSelected(item)
+
+    private fun loadFragment(homeFragment: HomeFragment) {
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.FragmentContainerView,homeFragment)
+        transaction.commit()
     }
+
+
 
 
 }

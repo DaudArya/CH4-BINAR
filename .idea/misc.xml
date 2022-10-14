@@ -3,6 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/custom_input.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/delete_style.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/edit_priority.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/edit_txt_shape.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/ic_launcher_background.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/ic_logout.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/ic_save.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/no_btn.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/purple2_dot.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/purple_dot.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/teal_dot.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/drawable/yes_btn.xml" value="0.253" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_login_screen.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_register_screen.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/dialog_delete.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/dialog_logout.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/fragment_create_note.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/fragment_delete.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/fragment_edit_notes.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/item_notes.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/layout/sign_up_window.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/menu/delete_menu.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH4-BINAR/app/src/main/res/menu/logout_menu.xml" value="0.25" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/btn_filter.xml" value="0.2" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/delete_style.xml" value="0.2265" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/Notes/app/src/main/res/drawable/edit_priority.xml" value="0.2265" />

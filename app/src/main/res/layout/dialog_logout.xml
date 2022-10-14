@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/delete_style"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:name="androidx.navigation.fragment.NavHostFragment">
     <View
         android:layout_width="150dp"
         android:layout_height="10dp"
@@ -24,7 +25,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/NoDelete"
+        android:id="@+id/NoLogout"
         android:textColor="@color/cardview_dark_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/YesDelete"
+        android:id="@+id/YesLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

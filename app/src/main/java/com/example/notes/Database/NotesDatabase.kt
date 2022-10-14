@@ -7,13 +7,17 @@ import androidx.room.RoomDatabase
 import com.example.notes.Dao.NotesDao
 import com.example.notes.Model.Notes
 
+//User::class,
 @Database(entities = [Notes::class], version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
 
     abstract fun myNotesDao() : NotesDao
+//    abstract fun myUserDao() : UserDao
+
 
     companion object{
         @Volatile
+
         var INSTANCE : NotesDatabase? = null
 
         fun getDatabaseInstance(context: Context): NotesDatabase{
