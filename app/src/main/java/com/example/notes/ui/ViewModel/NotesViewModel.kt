@@ -40,6 +40,8 @@ class NotesViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getImportantNotes() : LiveData<List<Notes>> = repository.getImportantNotes()
 
+
+
     fun getNormalNotes() : LiveData<List<Notes>> = repository.getNormalNotes()
 
     fun getCommonNotes() : LiveData<List<Notes>> = repository.getCommonNotes()
@@ -55,9 +57,6 @@ class NotesViewModel(application: Application) : AndroidViewModel(application) {
     private val _name = MutableLiveData( "Develop By Daud Arya")
 
     val name : LiveData<String> = _name
-
-
-
 
     }
 

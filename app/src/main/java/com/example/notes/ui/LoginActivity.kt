@@ -12,15 +12,19 @@ import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
 import com.example.notes.MainActivity
 import com.example.notes.R
 import com.example.notes.SharedPreferences.SharedPreference
 import com.example.notes.SplashScreen
+import com.example.notes.ui.ViewModel.NotesViewModel
 import kotlinx.android.synthetic.main.sign_up_window.view.*
 
 
 class LoginActivity : AppCompatActivity() {
     var sharedPreference: SharedPreference? = null
+
+
 
     lateinit var edt_email: EditText
     lateinit var edt_password: EditText

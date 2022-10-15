@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.notes.R
@@ -25,6 +26,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
     var sharedPreference: SharedPreference? = null
+//    private val viewModel by lazy { ViewModelProviders.of(this).get(NotesViewModel::class.java) }
 
     lateinit var binding: FragmentHomeBinding
 
@@ -36,6 +38,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
@@ -84,6 +87,8 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
+
+
 
 
 
