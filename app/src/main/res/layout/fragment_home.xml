@@ -1,108 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@color/back"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragment.HomeFragment">
+    >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.notes.ui.fragment.HomeFragment" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="@color/back"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.HomeFragment">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="fill"
-            android:orientation="horizontal"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/filternote"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="5dp"
-                android:src="@drawable/btn_filter">
-            </ImageView>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="fill"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/textcommon"
+                <ImageView
+                    android:id="@+id/filternote"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/btn_filter">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textcommon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Common"
+                    android:gravity="center"
+                    android:textColor="@color/purple_200"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:textSize="18dp"
+                    android:background="@drawable/edit_priority"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textnormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Normal"
+                    android:gravity="center"
+                    android:textColor="@color/purple_500"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:textSize="18dp"
+                    android:background="@drawable/edit_priority"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textimportant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="@{() -> viewmodel.getImportant()}"
+                    android:text="Important"
+                    android:gravity="center"
+                    android:textColor="@color/purple_700"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:textSize="18dp"
+                    android:background="@drawable/edit_priority"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvAllNotes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAddNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Common"
-                android:gravity="center"
-                android:textColor="@color/purple_200"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textSize="18dp"
-                android:background="@drawable/edit_priority"
-                android:textStyle="normal" />
+                android:layout_margin="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
 
-            <TextView
-                android:id="@+id/textnormal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Normal"
-                android:gravity="center"
-                android:textColor="@color/purple_500"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textSize="18dp"
-                android:background="@drawable/edit_priority"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/textimportant"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Important"
-                android:gravity="center"
-                android:textColor="@color/purple_700"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textSize="18dp"
-                android:background="@drawable/edit_priority"
-                android:textStyle="normal" />
-
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvAllNotes"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearLayout">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnAddNotes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="26dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/ic_add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
 
 
 
-</FrameLayout>
+
+
+</layout>

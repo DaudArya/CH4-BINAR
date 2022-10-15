@@ -18,6 +18,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.notes.SharedPreferences.SharedPreference
+import com.example.notes.databinding.ActivityMainBinding
 import com.example.notes.ui.LoginActivity
 import com.example.notes.ui.ViewModel.NotesViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     var sharedPreference: SharedPreference? = null
     lateinit var navController: NavController
     val viewModel : NotesViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
 
 
 

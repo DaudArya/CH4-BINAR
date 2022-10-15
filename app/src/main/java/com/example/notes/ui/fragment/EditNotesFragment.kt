@@ -74,9 +74,9 @@ class EditNotesFragment : Fragment() {
         binding.btnEditSaveNotes2.setOnClickListener(){
             UpdateNotes(it)
         }
-        binding.btndelete.setOnClickListener(){
-            DeleteNotes(it)
-        }
+//        binding.btndelete.setOnClickListener(){
+//            DeleteNotes(it)
+//        }
 
         return binding.root
     }
