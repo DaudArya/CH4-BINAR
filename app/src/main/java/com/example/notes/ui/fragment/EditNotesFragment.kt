@@ -74,14 +74,15 @@ class EditNotesFragment : Fragment() {
         binding.btnEditSaveNotes2.setOnClickListener(){
             UpdateNotes(it)
         }
-//        binding.btndelete.setOnClickListener(){
-//            DeleteNotes(it)
-//        }
+
+        binding.btndelete.setOnClickListener(){
+            DeleteNotes(it)
+        }
 
         return binding.root
     }
 
-    private fun UpdateNotes(it:View?){
+     fun UpdateNotes(it:View?){
         val title = binding.editTitle2.text.toString()
         val subtitle = binding.editSubitle2.text.toString()
         val notes = binding.editNote2.text.toString()
